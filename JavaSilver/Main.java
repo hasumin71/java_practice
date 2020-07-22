@@ -102,15 +102,29 @@
 // }
 
 //5_14
+// public class Main {
+//   public static void main(String[] args){
+//     String[] array = { "A", "B"};
+//     for(String a : array){
+//       for(String b : array){
+//         if("B".equals(b))
+//           break;
+//         System.out.println(b);  
+//       }
+//     }
+//   }
+// }
+
+//5_15
 public class Main {
   public static void main(String[] args){
-    String[] array = { "A", "B"};
-    for(String a : array){
-      for(String b : array){
-        if("B".equals(b))
-          break;
-        System.out.println(b);  
-      }
+    int[] array = {1,2,3,4,5};
+    int total = 0;
+    for(int i : array){
+      if(i%2 == 0)
+        continue;
+        total += i;
     }
+    System.out.println(total);
   }
 }
