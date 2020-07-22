@@ -87,3 +87,16 @@
 //   }
 // }
 //結果 [Ljava.lang.String;@7852e922
+
+//5_12
+// public class Main {
+//   public static void main(String[] args){
+//     String[] array = {"A","B","C"};
+//     for(String str : array){
+//       str = "D"; //変数strの参照先は変わるけれど集合の要素が変わるわけではない
+//     }
+//     for (String str : array ){
+//       System.out.print(str);
+//     }
+//   }
+// }
