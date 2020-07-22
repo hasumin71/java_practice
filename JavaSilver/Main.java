@@ -52,13 +52,27 @@
 //NullPointerException
 
 //4_11
+// public class Main {
+//   public static void main(String[] args) {
+//     char[] arrayA = {'a','b','c','d','e'};
+//     char[] arrayB = new char[arrayA.length];
+//     System.arraycopy(arrayA,1,arrayB,0,4);
+//     for(char c : arrayB) {
+//       System.out.println(c);
+//     }
+//   }
+// }//arrayBの配列インスタンス生成の際、５の要素数を作成しているので出力時1スペース分空く
+
+//5_9//問,10と出力したい
 public class Main {
-  public static void main(String[] args) {
-    char[] arrayA = {'a','b','c','d','e'};
-    char[] arrayB = new char[arrayA.length];
-    System.arraycopy(arrayA,1,arrayB,0,4);
-    for(char c : arrayB) {
-      System.out.println(c);
+  public static void main(String[] args){
+    int array[][] = new int[][] {{1,2},{2,3,4}};
+    int total = 0;
+    for(int i=0; i < array.length; i++){
+      for(int j = i; j < array[i].length; j++){
+        total += array[i][j];
+      }
     }
+    System.out.println(total);
   }
-}//arrayBの配列インスタンス生成の際、５の要素数を作成しているので出力時1スペース分空く
+}
