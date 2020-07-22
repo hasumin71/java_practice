@@ -64,15 +64,26 @@
 // }//arrayBの配列インスタンス生成の際、５の要素数を作成しているので出力時1スペース分空く
 
 //5_9//問,10と出力したい
-public class Main {
-  public static void main(String[] args){
-    int array[][] = new int[][] {{1,2},{2,3,4}};
-    int total = 0;
-    for(int i=0; i < array.length; i++){
-      for(int j = i; j < array[i].length; j++){
-        total += array[i][j];
-      }
-    }
-    System.out.println(total);
-  }
-}
+// public class Main {
+//   public static void main(String[] args){
+//     int array[][] = new int[][] {{1,2},{2,3,4}};
+//     int total = 0;
+//     for(int i=0; i < array.length; i++){
+//       for(int j = i; j < array[i].length; j++){
+//         total += array[i][j];
+//       }
+//     }
+//     System.out.println(total);
+//   }
+// }
+
+//5_11
+// public class Main {
+//   public static void main(String[] args){
+//     String[][] array = {{"A","B","C"}};
+//     for(Object obj : array){
+//       System.out.println(obj);
+//     }
+//   }
+// }
+//結果 [Ljava.lang.String;@7852e922
