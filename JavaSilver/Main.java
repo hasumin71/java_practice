@@ -145,13 +145,27 @@
 // }
 
 //6_7
+// public class Main {
+//   public static void main(String[] args){
+//     Sample.num = 10; //staticなフィールドへのアクセス、クラス名.フィールド名 static領域は10 ヒープ領域は0
+//     Sample s = new Sample();
+//     Sample s2 = new Sample();
+//     s.num += 10; //これはコンパイル時にSample.num += 10に置き換えられる
+//     s2.num = 30;
+//     System.out.println(Sample.num);
+//   }
+// }
+
+//6_10
 public class Main {
   public static void main(String[] args){
-    Sample.num = 10; //staticなフィールドへのアクセス、クラス名.フィールド名 static領域は10 ヒープ領域は0
-    Sample s = new Sample();
-    Sample s2 = new Sample();
-    s.num += 10; //これはコンパイル時にSample.num += 10に置き換えられる
-    s2.num = 30;
-    System.out.println(Sample.num);
+    Main m = new Main();
+    System.out.println(m.calc(2,3));//引数の数値リテラルは暗黙でint画になる calcメソッドを呼び出しているが一致するオーバーロードがない
+  }
+  private double calc(double a, int b){ //しかし上下二つのcalcメソッドはどちらもdoubleを使用し、その型の受け取れる範囲が広いため,呼び出しがどちらを呼べばいいのかわからない
+    return (a + b) /2;
+  }
+  private double calc(int a, double b){
+    return (a + b) /2;
   }
 }
