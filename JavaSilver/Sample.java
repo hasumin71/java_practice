@@ -30,6 +30,13 @@
 // }
 
 //6_7
+// public class Sample {
+//   static int num = 0; //static領域はインスタンス生成しなくても使える
+// }
+
+//6_13
 public class Sample {
-  static int num = 0; //static領域はインスタンス生成しなくても使える
+  void Sample() {
+    System.out.println("hello.");
+  }
 }

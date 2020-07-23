@@ -157,15 +157,23 @@
 // }
 
 //6_10
+// public class Main {
+//   public static void main(String[] args){
+//     Main m = new Main();
+//     System.out.println(m.calc(2,3));//引数の数値リテラルは暗黙でint画になる calcメソッドを呼び出しているが一致するオーバーロードがない
+//   }
+//   private double calc(double a, int b){ //しかし上下二つのcalcメソッドはどちらもdoubleを使用し、その型の受け取れる範囲が広いため,呼び出しがどちらを呼べばいいのかわからない
+//     return (a + b) /2;
+//   }
+//   private double calc(int a, double b){
+//     return (a + b) /2;
+//   }
+// }
+
+//6_13
 public class Main {
   public static void main(String[] args){
-    Main m = new Main();
-    System.out.println(m.calc(2,3));//引数の数値リテラルは暗黙でint画になる calcメソッドを呼び出しているが一致するオーバーロードがない
-  }
-  private double calc(double a, int b){ //しかし上下二つのcalcメソッドはどちらもdoubleを使用し、その型の受け取れる範囲が広いため,呼び出しがどちらを呼べばいいのかわからない
-    return (a + b) /2;
-  }
-  private double calc(int a, double b){
-    return (a + b) /2;
+    Sample s = new Sample();
+    s.Sample();
   }
 }
