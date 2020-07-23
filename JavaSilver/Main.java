@@ -116,14 +116,29 @@
 // }
 
 //5_15
+// public class Main {
+//   public static void main(String[] args){
+//     int[] array = {1,2,3,4,5};
+//     int total = 0;
+//     for(int i : array){
+//       if(i%2 == 0)
+//         continue;
+//         total += i;
+//     }
+//     System.out.println(total);
+//   }
+// }
+
+//5_17
 public class Main {
   public static void main(String[] args){
-    int[] array = {1,2,3,4,5};
     int total = 0;
-    for(int i : array){
-      if(i%2 == 0)
-        continue;
-        total += i;
+    a: for(int i = 0; i < 5; i++){
+      b: for(int j =0; j < 5; j++){
+        if(i%2 == 0)continue a; //i==0の時もラベルaに
+        if(3 < j)break b;
+        total += j;
+      }
     }
     System.out.println(total);
   }
