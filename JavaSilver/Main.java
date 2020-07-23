@@ -130,16 +130,28 @@
 // }
 
 //5_17
+// public class Main {
+//   public static void main(String[] args){
+//     int total = 0;
+//     a: for(int i = 0; i < 5; i++){
+//       b: for(int j =0; j < 5; j++){
+//         if(i%2 == 0)continue a; //i==0の時もラベルaに
+//         if(3 < j)break b;
+//         total += j;
+//       }
+//     }
+//     System.out.println(total);
+//   }
+// }
+
+//6_7
 public class Main {
   public static void main(String[] args){
-    int total = 0;
-    a: for(int i = 0; i < 5; i++){
-      b: for(int j =0; j < 5; j++){
-        if(i%2 == 0)continue a; //i==0の時もラベルaに
-        if(3 < j)break b;
-        total += j;
-      }
-    }
-    System.out.println(total);
+    Sample.num = 10; //staticなフィールドへのアクセス、クラス名.フィールド名 static領域は10 ヒープ領域は0
+    Sample s = new Sample();
+    Sample s2 = new Sample();
+    s.num += 10; //これはコンパイル時にSample.num += 10に置き換えられる
+    s2.num = 30;
+    System.out.println(Sample.num);
   }
 }

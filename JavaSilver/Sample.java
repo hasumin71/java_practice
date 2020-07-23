@@ -17,3 +17,19 @@
 //     return false;
 //   }
 // }
+
+//6_2
+// public class Sample {
+//   private String value;
+//   public void setValue(String value){ //戻り値型がvoid担っているので戻り値を戻しません
+//     this.value = value;
+//   }
+//   public String getValue(){
+//     return this.value;
+//   }
+// }
+
+//6_7
+public class Sample {
+  static int num = 0; //static領域はインスタンス生成しなくても使える
+}
