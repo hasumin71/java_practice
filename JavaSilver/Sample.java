@@ -35,8 +35,29 @@
 // }
 
 //6_13
-public class Sample {
-  void Sample() {
-    System.out.println("hello.");
-  }
-}
+// public class Sample {
+//   void Sample() {
+//     System.out.println("hello.");
+//   }
+// }
+
+//6_14
+// public class Sample {
+//   Sample(){
+//     System.out.println("A");
+//   }
+//   {
+//     System.out.println("B");
+//   }
+// }
+
+//6_17
+// public class Sample {
+//   public Sample() {
+//     System.out.println("A");
+//     this("B"); //オーバーロードされた別のコンストラクタを呼び出すコードは、最初に記述しなければいけない
+//   }
+//   public  Sample(String str){
+//     System.out.println(str);
+//   }
+// }

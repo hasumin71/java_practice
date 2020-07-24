@@ -171,9 +171,23 @@
 // }
 
 //6_13
-public class Main {
-  public static void main(String[] args){
-    Sample s = new Sample();
-    s.Sample();
-  }
-}
+// public class Main {
+//   public static void main(String[] args){
+//     Sample s = new Sample();
+//     s.Sample();
+//   }
+// }
+
+//6_14
+// public class Main {
+//   public static void main(String[] args){
+//     Sample s = new Sample();
+//   }
+// }
+
+//6_17
+// public class Main {
+//   public static void main(String[] args){
+//     Sample s = new Sample();
+//   }
+// }
