@@ -61,3 +61,19 @@
 //     System.out.println(str);
 //   }
 // }
+
+//6_21
+// public class Sample {
+//   int num;
+//   public Sample(int num){
+//     this.num = num;
+//   }
+// }
+
+//6_22
+public class Sample {
+  int num;
+  public Sample(int num){
+    this.num = num;
+  }
+}

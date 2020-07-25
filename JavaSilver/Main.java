@@ -191,3 +191,27 @@
 //     Sample s = new Sample();
 //   }
 // }
+
+//6_21
+// public class Main {
+//   public static void main(String[] args){ //mainメソッドと
+//     Sample s = new Sample(10);
+//     modify(s.num); //numフィールドの値がコピーされたものが引数に渡されている
+//     System.out.println(s.num);
+//   }
+//   private static void modify(int num){ //Sampleのインスタンスがもつnumフィールドの値とは異なる変数
+//     num *= 2;
+//   }
+// }
+
+//6_22
+public class Main {
+  public static void main(String[] args) {
+    Sample s = new Sample(10);
+    modify(s);
+    System.out.println(s.num);
+  }
+  private static void modify(Sample s){
+    s.num *= 2;
+  }
+}
