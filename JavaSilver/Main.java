@@ -253,8 +253,21 @@
 // }
 
 //7_17
+// public class Main {
+//   public static void main(String[] args){
+//     new Child("D");
+//   }
+// }
+
+//8_1
 public class Main {
   public static void main(String[] args){
-    new Child("D");
+    try{ //例外が発生する可能性がある処理
+      int[] array = {};
+      array[0] = 10;//要素数0に対して値を代入しようとしているのでcatchの処理に移る
+      System.out.println("finish");
+    } catch (ArrayIndexOutOfBoundsException e){ //例外が発生した時の処理
+      System.out.println("error");
+    }
   }
 }
