@@ -229,9 +229,18 @@
 // }
 
 //7_14
+// public class Main {
+//   public static void main(String[] args){
+//     Sample s = new Sample(10);
+//     System.out.println(s.getNum());
+//   }
+// }
+
+//7_15
 public class Main {
   public static void main(String[] args){
-    Sample s = new Sample(10);
-    System.out.println(s.getNum());
-  }
+    Child child = new Child();
+    child.name = "sample"; //child型に定義されたnameフィールドに"sample”という値を入れている
+    System.out.println(child.getName()); //しかしgetNameはParentクラスで定義されており戻り値もParentクラスのフィールドを返すよう記述されているため
+  } 
 }
