@@ -205,13 +205,25 @@
 // }
 
 //6_22
+// public class Main {
+//   public static void main(String[] args) {
+//     Sample s = new Sample(10);
+//     modify(s);
+//     System.out.println(s.num);
+//   }
+//   private static void modify(Sample s){
+//     s.num *= 2;
+//   }
+// }
+
+//7_10
 public class Main {
-  public static void main(String[] args) {
-    Sample s = new Sample(10);
-    modify(s);
-    System.out.println(s.num);
-  }
-  private static void modify(Sample s){
-    s.num *= 2;
+  public static void main(String[] args){
+    Worker a = new Engineer();
+    Employee b = new Engineer();
+    Employee c = new Engineer();
+    a.create(); //どの型で使っているかポイント //Worker型にcreateメソッドが使われていない
+    b.work(); //Employee型にworkメソッドがあるから
+    c.report();
   }
 }

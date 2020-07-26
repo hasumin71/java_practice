@@ -71,9 +71,9 @@
 // }
 
 //6_22
-public class Sample {
-  int num;
-  public Sample(int num){
-    this.num = num;
-  }
-}
+// public class Sample {
+//   int num;
+//   public Sample(int num){
+//     this.num = num;
+//   }
+// }
