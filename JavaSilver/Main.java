@@ -217,13 +217,21 @@
 // }
 
 //7_10
+// public class Main {
+//   public static void main(String[] args){
+//     Worker a = new Engineer();
+//     Employee b = new Engineer();
+//     Employee c = new Engineer();
+//     a.create(); //どの型で使っているかポイント //Worker型にcreateメソッドが使われていない
+//     b.work(); //Employee型にworkメソッドがあるから
+//     c.report();
+//   }
+// }
+
+//7_14
 public class Main {
   public static void main(String[] args){
-    Worker a = new Engineer();
-    Employee b = new Engineer();
-    Employee c = new Engineer();
-    a.create(); //どの型で使っているかポイント //Worker型にcreateメソッドが使われていない
-    b.work(); //Employee型にworkメソッドがあるから
-    c.report();
+    Sample s = new Sample(10);
+    System.out.println(s.getNum());
   }
 }
