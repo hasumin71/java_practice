@@ -308,18 +308,30 @@
 // }
 
 //8_5
+// public class Main {
+//   public static void main(String[] args){
+//     System.out.println(test(null));
+//   }
+//   private static String test(Object obj){
+//     try{
+//       System.out.println(obj.toString());
+//     }catch(NullPointerException e){
+//       return "A";
+//     }finally{ //finallyブロックが終了してから制御が戻される
+//       System.out.println("B");
+//     }
+//     return "C";
+//   }
+// }
+
+//8_17
 public class Main {
   public static void main(String[] args){
-    System.out.println(test(null));
-  }
-  private static String test(Object obj){
-    try{
-      System.out.println(obj.toString());
-    }catch(NullPointerException e){
-      return "A";
-    }finally{ //finallyブロックが終了してから制御が戻される
-      System.out.println("B");
+    String str = null;
+    if(str.equals("")){ //strはnullが入っている。このようにnullに対してメソッドを使うとNullPointerExceptionがスローされる
+      System.out.println("blank");
+    }else{
+      System.out.println("null");
     }
-    return "C";
   }
 }
