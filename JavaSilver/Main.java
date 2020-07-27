@@ -260,14 +260,66 @@
 // }
 
 //8_1
+// public class Main {
+//   public static void main(String[] args){
+//     try{ //例外が発生する可能性がある処理
+//       int[] array = {};
+//       array[0] = 10;//要素数0に対して値を代入しようとしているのでcatchの処理に移る
+//       System.out.println("finish");
+//     } catch (ArrayIndexOutOfBoundsException e){ //例外が発生した時の処理
+//       System.out.println("error");
+//     }
+//   }
+// }
+
+//8_2
+// public class Main {
+//   public static void main(String[] args){
+//     try{
+//       if(args.length == 0){
+//         System.out.println("A"); //起動パラメータは何も渡されないので処理が実行される
+//       }
+//     }catch (NullPointerException e){
+//       System.out.println("B");
+//     }finally{
+//       System.out.println("C"); //例外発生の有無にかかわらず必ず実行したい処理を記述するのがこのfinallyブロック
+//     }
+//   }
+// }
+
+// //8_3
+// public class Main {
+//   public static void main(String[] args){
+//     try{
+//       sample();
+//       sub();
+//     }catch (SampleException e){
+//       System.out.println("A");
+//     }catch (SubSampleException e){
+//       System.out.println("B");
+//     }
+//   }
+//   private static void sample() throws SampleException{
+//     throw new SampleException();
+//   }
+//   private static void sub() throws SubSampleException{
+//     throw new SubSampleException();
+//   }
+// }
+
+//8_5
 public class Main {
   public static void main(String[] args){
-    try{ //例外が発生する可能性がある処理
-      int[] array = {};
-      array[0] = 10;//要素数0に対して値を代入しようとしているのでcatchの処理に移る
-      System.out.println("finish");
-    } catch (ArrayIndexOutOfBoundsException e){ //例外が発生した時の処理
-      System.out.println("error");
+    System.out.println(test(null));
+  }
+  private static String test(Object obj){
+    try{
+      System.out.println(obj.toString());
+    }catch(NullPointerException e){
+      return "A";
+    }finally{ //finallyブロックが終了してから制御が戻される
+      System.out.println("B");
     }
+    return "C";
   }
 }
