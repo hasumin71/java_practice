@@ -325,13 +325,21 @@
 // }
 
 //8_17
+// public class Main {
+//   public static void main(String[] args){
+//     String str = null;
+//     if(str.equals("")){ //strはnullが入っている。このようにnullに対してメソッドを使うとNullPointerExceptionがスローされる
+//       System.out.println("blank");
+//     }else{
+//       System.out.println("null");
+//     }
+//   }
+// }
+
+//9_6
 public class Main {
   public static void main(String[] args){
-    String str = null;
-    if(str.equals("")){ //strはnullが入っている。このようにnullに対してメソッドを使うとNullPointerExceptionがスローされる
-      System.out.println("blank");
-    }else{
-      System.out.println("null");
-    }
+    String str = " a b c d e \t";
+    System.out.println("[" +str.trim() + "]");
   }
 }
