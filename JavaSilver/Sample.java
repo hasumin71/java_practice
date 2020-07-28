@@ -93,12 +93,24 @@
 // }
 
 //9_24
+// public class Sample {
+//   public static void main(String[] args){
+//     int cnt = 0;
+//     Runnable r = () -> {
+//       for(cnt = 0; cnt < 10; cnt++); //for文の更新文がインクリメントしているのでローカル変数cntを変更してしまっている。
+//     }
+//   };
+//   new Thread(r).start();
+// }
+
+//9_26
+import java.time.LocalDate;
+
 public class Sample {
-  public static void main(String[] args){
-    int cnt = 0;
-    Runnable r = () -> {
-      for(cnt = 0; cnt < 10; cnt++); //for文の更新文がインクリメントしているのでローカル変数cntを変更してしまっている。
-    }
-  };
-  new Thread(r).start();
+  public static void main(String[] args){    
+    LocalDate a = LocalDate.of(2015, 0, 1); //Calenderクラスでは0から始まったがLocalDateクラスでは月は1から始まる
+    //LocalDateクラスのインスタンスを生成するには、ofメソッド(日付を指定してインスタンスを生成)かnowメソッド(現在の日付でインスタンスを生成)のいずれかを使う。
+    LocalDate b = LocalDate.parse("2015-01-01"); //構文上問題はないが,java.time.DateTimeExceptionがスローされる
+    System.out.println(a.equals(b));
+  }
 }
