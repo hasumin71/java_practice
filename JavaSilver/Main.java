@@ -361,9 +361,21 @@
 // }
 
 //9_9
-public class Main {
+// public class Main {
+//   public static void main(String[] args){
+//     String str = "abcde";
+//     System.out.println(str.substring(1,3).startsWith("b")); //startsWithは文字列が指定された文字で始まるかどうかを調べるメソッド
+//   }                        //bcを取得                        //真偽値で返す
+// }
+
+//9_10
+public class Main{
   public static void main(String[] args){
-    String str = "abcde";
-    System.out.println(str.substring(1,3).startsWith("b")); //startsWithは文字列が指定された文字で始まるかどうかを調べるメソッド
-  }                        //bcを取得                        //真偽値で返す
-}
+    String str = "a. b. c. d. e";
+    String[] array = str.split("\\w\\s"); //分割する箇所を正規表現で指定している \wは単語構成文字がアルファベットや数字\sは空白文字
+    for(String s: array){
+      System.out.println(s);
+    }
+  }
+} 
+//ドットに続いて空白が現れる指定をしてないのでそのままを返す
