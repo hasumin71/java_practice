@@ -345,9 +345,17 @@
 // }
 
 //9_7
+// public class Main {
+//   public static void main(String[] args){
+//     String str = "aaaa"; //"aa"の二つ分が"b"になるから結果はbb
+//     System.out.println(str.replace("aa", "b"));
+//   }
+// }
+
+//9_8
 public class Main {
   public static void main(String[] args){
-    String str = "aaaa"; //"aa"の二つ分が"b"になるから結果はbb
-    System.out.println(str.replace("aa", "b"));
-  }
+    String str = "abcde";
+    System.out.println(str.charAt(str.length())); //charAtは引数で指定された位置にある文字を抽出する　
+  } //範囲外を示すStringIndexOutOfBoundsExceptionを返す
 }
