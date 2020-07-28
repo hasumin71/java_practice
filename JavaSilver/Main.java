@@ -505,15 +505,16 @@
 // }
 
 //9_23
-public class Main{
-  public static void main(String[] args){ //エラー valはすでにメソッド main(String[])で定義されています
-    String val = "A";
-    Function f = (val) -> { //ラムダ式はそれを囲むブロック(mainメソッド)と同じスコープを持つ
-      System.out.println(val);
-    };
-    f.test("B");
-  }
-}
-interface Function {
-  void test(String val);
-}
+// public class Main{
+//   public static void main(String[] args){ //エラー valはすでにメソッド main(String[])で定義されています
+//     String val = "A";
+//     Function f = (val) -> { //ラムダ式はそれを囲むブロック(mainメソッド)と同じスコープを持つ
+//       System.out.println(val);
+//     };
+//     f.test("B");
+//   }
+// }
+// interface Function {
+//   void test(String val);
+// }
+

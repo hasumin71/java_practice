@@ -91,3 +91,14 @@
 //     this.num = num;
 //   }
 // }
+
+//9_24
+public class Sample {
+  public static void main(String[] args){
+    int cnt = 0;
+    Runnable r = () -> {
+      for(cnt = 0; cnt < 10; cnt++); //for文の更新文がインクリメントしているのでローカル変数cntを変更してしまっている。
+    }
+  };
+  new Thread(r).start();
+}
