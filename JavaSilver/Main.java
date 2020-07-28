@@ -482,13 +482,38 @@
 // }
 
 //9_21
+// public class Main{
+//   public static void main(String[] args){
+//     Algorithm algorithm = (String name) ->{
+//       System.out.println("hello, " + name);
+//     };
+//     Service s = new Service();
+//     s.setLogic(algorithm);
+//     s.doProcess("Lamda");
+//   }
+// }
+
+//9_22
+// public class Main{
+//   public static void main(String[] args){
+//     Function f = (name) -> "hello, " + name;
+//     System.out.println(f.test("Lamda"));
+//   }
+//   private static interface Function {
+//     String test(String name);
+//   }
+// }
+
+//9_23
 public class Main{
-  public static void main(String[] args){
-    Algorithm algorithm = (String name) ->{
-      System.out.println("hello, " + name);
+  public static void main(String[] args){ //エラー valはすでにメソッド main(String[])で定義されています
+    String val = "A";
+    Function f = (val) -> { //ラムダ式はそれを囲むブロック(mainメソッド)と同じスコープを持つ
+      System.out.println(val);
     };
-    Service s = new Service();
-    s.setLogic(algorithm);
-    s.doProcess("Lamda");
+    f.test("B");
   }
+}
+interface Function {
+  void test(String val);
 }
