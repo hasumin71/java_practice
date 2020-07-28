@@ -450,11 +450,22 @@
 // }
 
 //9_18
+// public class Main{
+//   public static void main(String[] args){
+//     StringBuilder sb = new StringBuilder("absde");
+//     sb.delete(1,3);//bs削除
+//     sb.deleteCharAt(2); //e削除
+//     System.out.println(sb);
+//   }
+// }
+
+//9_19
 public class Main{
   public static void main(String[] args){
-    StringBuilder sb = new StringBuilder("absde");
-    sb.delete(1,3);//bs削除
-    sb.deleteCharAt(2); //e削除
+    StringBuilder sb = new StringBuilder();
+    sb.append("abcde");
+    sb.reverse(); //edcba
+    sb.replace(1,3,"a"); //dcをaに置換
     System.out.println(sb);
   }
 }
