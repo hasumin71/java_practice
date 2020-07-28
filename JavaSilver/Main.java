@@ -389,8 +389,41 @@
 // }
 
 //9_12
+// public class Main{
+//   public static void main(String[] args){
+//     System.out.println(10 + 20 + "30" + 40); //Javaの+演算子は文字列を連結する
+//   }
+// }
+
+//9_13
+// public class Main{
+//   public static void main(String[] args){
+//     String str = null;
+//     str += "null"; //参照をもたいなString型変数に対してこのような演算をするとnullは"null"という文字列に置換されnullnullという結果になる
+//     System.out.println(str);
+//   }
+// }
+
+//9_14
+// public class Main{
+//   public static void main(String[] args){
+//     StringBuilder sb = new StringBuilder("abcde");
+//     System.out.println(sb.capacity()); 
+//   }
+// }
+
+//9_15
 public class Main{
   public static void main(String[] args){
-    System.out.println(10 + 20 + "30" + 40); //Javaの+演算子は文字列を連結する
+    StringBuilder sb = new StringBuilder();
+    sb.append(true);
+    sb.append(10);
+    sb.append('a');
+    sb.append("bcdef",1,3);
+
+    char[] array = {'h','e','l','l','o'};
+    sb.append(array);
+
+    System.out.println(sb);
   }
 }
