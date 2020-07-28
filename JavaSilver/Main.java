@@ -381,9 +381,16 @@
 //ドットに続いて空白が現れる指定をしてないのでそのままを返す
 
 //9_11
-public class Main {
+// public class Main {
+//   public static void main(String[] args){
+//     String str = "Hello, ".concat("Java!");
+//     System.out.println(str);
+//   }
+// }
+
+//9_12
+public class Main{
   public static void main(String[] args){
-    String str = "Hello, ".concat("Java!");
-    System.out.println(str);
+    System.out.println(10 + 20 + "30" + 40); //Javaの+演算子は文字列を連結する
   }
 }
