@@ -438,13 +438,23 @@
 // }
 
 //9_17
+// public class Main{
+//   public static void main(String[] args){
+//     StringBuilder sb = new StringBuilder();
+//     sb.append("a");
+//     sb.insert(1,"b");
+//     sb.append("cde");
+//     sb.delete(1,2);
+//     System.out.println(sb);
+//   }
+// }
+
+//9_18
 public class Main{
   public static void main(String[] args){
-    StringBuilder sb = new StringBuilder();
-    sb.append("a");
-    sb.insert(1,"b");
-    sb.append("cde");
-    sb.delete(1,2);
+    StringBuilder sb = new StringBuilder("absde");
+    sb.delete(1,3);//bs削除
+    sb.deleteCharAt(2); //e削除
     System.out.println(sb);
   }
 }
