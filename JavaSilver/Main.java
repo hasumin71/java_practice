@@ -337,9 +337,17 @@
 // }
 
 //9_6
+// public class Main {
+//   public static void main(String[] args){
+//     String str = " a b c d e \t";
+//     System.out.println("[" +str.trim() + "]");
+//   }
+// }
+
+//9_7
 public class Main {
   public static void main(String[] args){
-    String str = " a b c d e \t";
-    System.out.println("[" +str.trim() + "]");
+    String str = "aaaa"; //"aa"の二つ分が"b"になるから結果はbb
+    System.out.println(str.replace("aa", "b"));
   }
 }
