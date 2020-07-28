@@ -413,17 +413,26 @@
 // }
 
 //9_15
-public class Main{
+// public class Main{
+//   public static void main(String[] args){
+//     StringBuilder sb = new StringBuilder();
+//     sb.append(true);
+//     sb.append(10);
+//     sb.append('a');
+//     sb.append("bcdef",1,3);
+
+//     char[] array = {'h','e','l','l','o'};
+//     sb.append(array);
+
+//     System.out.println(sb);
+//   }
+// }
+
+//9_16
+public class Main {
   public static void main(String[] args){
-    StringBuilder sb = new StringBuilder();
-    sb.append(true);
-    sb.append(10);
-    sb.append('a');
-    sb.append("bcdef",1,3);
-
-    char[] array = {'h','e','l','l','o'};
-    sb.append(array);
-
+    StringBuilder sb = new StringBuilder("abc");
+    sb.append("de").insert(2,"g");
     System.out.println(sb);
   }
 }
