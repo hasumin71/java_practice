@@ -369,13 +369,21 @@
 // }
 
 //9_10
-public class Main{
-  public static void main(String[] args){
-    String str = "a. b. c. d. e";
-    String[] array = str.split("\\w\\s"); //分割する箇所を正規表現で指定している \wは単語構成文字がアルファベットや数字\sは空白文字
-    for(String s: array){
-      System.out.println(s);
-    }
-  }
-} 
+// public class Main{
+//   public static void main(String[] args){
+//     String str = "a. b. c. d. e";
+//     String[] array = str.split("\\w\\s"); //分割する箇所を正規表現で指定している \wは単語構成文字がアルファベットや数字\sは空白文字
+//     for(String s: array){
+//       System.out.println(s);
+//     }
+//   }
+// } 
 //ドットに続いて空白が現れる指定をしてないのでそのままを返す
+
+//9_11
+public class Main {
+  public static void main(String[] args){
+    String str = "Hello, ".concat("Java!");
+    System.out.println(str);
+  }
+}
