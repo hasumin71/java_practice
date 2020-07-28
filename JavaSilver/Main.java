@@ -460,12 +460,35 @@
 // }
 
 //9_19
+// public class Main{
+//   public static void main(String[] args){
+//     StringBuilder sb = new StringBuilder();
+//     sb.append("abcde");
+//     sb.reverse(); //edcba
+//     sb.replace(1,3,"a"); //dcをaに置換
+//     System.out.println(sb);
+//   }
+// }
+
+//9_20
+// public class Main {
+//   public static void main(String[] args){
+//     StringBuilder sb = new StringBuilder();
+//     sb.insert(0,"abcde"); //第一引数に1が入っていないと
+//     CharSequence seq = sb.subSequence(1,5); //CharSequenceはインターフェイス //bcde
+//     String str = new StringBuilder(seq).substring(1,3);
+//     System.out.println(str);
+//   }
+// }
+
+//9_21
 public class Main{
   public static void main(String[] args){
-    StringBuilder sb = new StringBuilder();
-    sb.append("abcde");
-    sb.reverse(); //edcba
-    sb.replace(1,3,"a"); //dcをaに置換
-    System.out.println(sb);
+    Algorithm algorithm = (String name) ->{
+      System.out.println("hello, " + name);
+    };
+    Service s = new Service();
+    s.setLogic(algorithm);
+    s.doProcess("Lamda");
   }
 }
