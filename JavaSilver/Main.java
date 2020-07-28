@@ -353,9 +353,17 @@
 // }
 
 //9_8
+// public class Main {
+//   public static void main(String[] args){
+//     String str = "abcde";
+//     System.out.println(str.charAt(str.length())); //charAtは引数で指定された位置にある文字を抽出する　
+//   } //範囲外を示すStringIndexOutOfBoundsExceptionを返す
+// }
+
+//9_9
 public class Main {
   public static void main(String[] args){
     String str = "abcde";
-    System.out.println(str.charAt(str.length())); //charAtは引数で指定された位置にある文字を抽出する　
-  } //範囲外を示すStringIndexOutOfBoundsExceptionを返す
+    System.out.println(str.substring(1,3).startsWith("b")); //startsWithは文字列が指定された文字で始まるかどうかを調べるメソッド
+  }                        //bcを取得                        //真偽値で返す
 }
