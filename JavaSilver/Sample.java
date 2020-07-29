@@ -104,13 +104,27 @@
 // }
 
 //9_26
-import java.time.LocalDate;
+// import java.time.LocalDate;
+
+// public class Sample {
+//   public static void main(String[] args){    
+//     LocalDate a = LocalDate.of(2015, 0, 1); //Calenderクラスでは0から始まったがLocalDateクラスでは月は1から始まる
+//     //LocalDateクラスのインスタンスを生成するには、ofメソッド(日付を指定してインスタンスを生成)かnowメソッド(現在の日付でインスタンスを生成)のいずれかを使う。
+//     LocalDate b = LocalDate.parse("2015-01-01"); //構文上問題はないが,java.time.DateTimeExceptionがスローされる
+//     System.out.println(a.equals(b));
+//   }
+// }
+
+//9_28
+import java.time.Duration;
+import java.time.LocalDateTime;
 
 public class Sample {
-  public static void main(String[] args){    
-    LocalDate a = LocalDate.of(2015, 0, 1); //Calenderクラスでは0から始まったがLocalDateクラスでは月は1から始まる
-    //LocalDateクラスのインスタンスを生成するには、ofメソッド(日付を指定してインスタンスを生成)かnowメソッド(現在の日付でインスタンスを生成)のいずれかを使う。
-    LocalDate b = LocalDate.parse("2015-01-01"); //構文上問題はないが,java.time.DateTimeExceptionがスローされる
-    System.out.println(a.equals(b));
+  public static void main(String[] args){
+    LocalDateTime start = LocalDateTime.of(2015, 1, 1, 0, 0); //LocalDateTimeは日時の両方を扱えるクラス
+    LocalDateTime end = LocalDateTime.of(2015, 1, 2, 1, 0, 0);
+    Duration d = Duration.between(start, end); //Durationは時刻の差を扱うためのクラス betweenメソッドは二つの日時の差を計算し、その結果をDurationのインスタンスとして戻すメソッドです。
+    //betweenメソッドはTemporalインターフェース型のオブジェクトを二つ受け取る Temporalインターフェースは、LocalDateやLocalTime,LocaDateTimeが実装しているインターフェースです
+    System.out.println(d.toHours()); //時間の差を取り出すtoHoursメソッド この設問の場合は25時間を返す
   }
 }

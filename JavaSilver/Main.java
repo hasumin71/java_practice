@@ -518,3 +518,14 @@
 //   void test(String val);
 // }
 
+//9_27
+import java.time.LocalTime;
+
+public class Main {
+  public static void main(String[] args){
+    LocalTime time = LocalTime.of(0,1,2); //localtimeは不変オブジェクトのため
+    time.plusHours(12); //ここでplusHoursを使っても変更されない
+    System.out.println(time);
+  }
+}
+
