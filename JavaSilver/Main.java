@@ -530,14 +530,29 @@
 // }
 
 //9_29
-import java.time.LocalDate;
-import java.time.Period;
+// import java.time.LocalDate;
+// import java.time.Period;
+
+// public class Main {
+//   public static void main(String[] args){
+//     LocalDate now = LocalDate.now(); //まさに現時刻
+//     LocalDate target = now.plusDays(10); //現時刻に10日plus
+//     Period x = now.until(target); //untilは日付の差を計算する
+//     System.out.println(x.getDays());//getDaysで取得しないと10にならない
+//   }
+// }
+
+//9_32
+import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args){
-    LocalDate now = LocalDate.now(); //まさに現時刻
-    LocalDate target = now.plusDays(10); //現時刻に10日plus
-    Period x = now.until(target); //untilは日付の差を計算する
-    System.out.println(x.getDays());//getDaysで取得しないと10にならない
+    ArrayList<Object> list = new ArrayList<Object>(); //<>は型パラメータ
+    list.add("A"); 
+    list.add(10);
+    list.add("C");
+    for(Object obj : list){
+      System.out.print(obj);
+    }
   }
 }
