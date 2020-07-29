@@ -543,16 +543,35 @@
 // }
 
 //9_32
+// import java.util.ArrayList;
+
+// public class Main {
+//   public static void main(String[] args){
+//     ArrayList<Object> list = new ArrayList<Object>(); //<>は型パラメータ
+//     list.add("A"); 
+//     list.add(10);
+//     list.add("C");
+//     for(Object obj : list){
+//       System.out.print(obj);
+//     }
+//   }
+// }
+
+//9_36
 import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args){
-    ArrayList<Object> list = new ArrayList<Object>(); //<>は型パラメータ
-    list.add("A"); 
-    list.add(10);
+    ArrayList<String> list = new ArrayList<>();
+    list.add("A");
+    list.add("B");
     list.add("C");
-    for(Object obj : list){
-      System.out.print(obj);
+    for(String str : list){ //ここに戻ってくるときにはインデックス2番目の要素はないって事、removeメソッドの時点で要素が繰り上げされているので
+      if("B".equals(str)){
+        list.remove(str); //removeメソッドを使用すると削除された要素の位置に次の要素が繰り上げされる、よって次に繰り返し処理する要素がないとみなされAのみ表示される
+      }else{
+        System.out.println(str);
+      }
     }
   }
-}
+} //なぜ結果がAでCが出力されない？
