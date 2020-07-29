@@ -116,15 +116,16 @@
 // }
 
 //9_28
-import java.time.Duration;
-import java.time.LocalDateTime;
+// import java.time.Duration;
+// import java.time.LocalDateTime;
 
-public class Sample {
-  public static void main(String[] args){
-    LocalDateTime start = LocalDateTime.of(2015, 1, 1, 0, 0); //LocalDateTimeは日時の両方を扱えるクラス
-    LocalDateTime end = LocalDateTime.of(2015, 1, 2, 1, 0, 0);
-    Duration d = Duration.between(start, end); //Durationは時刻の差を扱うためのクラス betweenメソッドは二つの日時の差を計算し、その結果をDurationのインスタンスとして戻すメソッドです。
-    //betweenメソッドはTemporalインターフェース型のオブジェクトを二つ受け取る Temporalインターフェースは、LocalDateやLocalTime,LocaDateTimeが実装しているインターフェースです
-    System.out.println(d.toHours()); //時間の差を取り出すtoHoursメソッド この設問の場合は25時間を返す
-  }
-}
+// public class Sample {
+//   public static void main(String[] args){
+//     LocalDateTime start = LocalDateTime.of(2015, 1, 1, 0, 0); //LocalDateTimeは日時の両方を扱えるクラス
+//     LocalDateTime end = LocalDateTime.of(2015, 1, 2, 1, 0, 0);
+//     Duration d = Duration.between(start, end); //Durationは時刻の差を扱うためのクラス betweenメソッドは二つの日時の差を計算し、その結果をDurationのインスタンスとして戻すメソッドです。
+//     //betweenメソッドはTemporalインターフェース型のオブジェクトを二つ受け取る Temporalインターフェースは、LocalDateやLocalTime,LocaDateTimeが実装しているインターフェースです
+//     System.out.println(d.toHours()); //時間の差を取り出すtoHoursメソッド この設問の場合は25時間を返す
+//   }
+// }
+

@@ -519,13 +519,25 @@
 // }
 
 //9_27
-import java.time.LocalTime;
+// import java.time.LocalTime;
+
+// public class Main {
+//   public static void main(String[] args){
+//     LocalTime time = LocalTime.of(0,1,2); //localtimeは不変オブジェクトのため
+//     time.plusHours(12); //ここでplusHoursを使っても変更されない
+//     System.out.println(time);
+//   }
+// }
+
+//9_29
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Main {
   public static void main(String[] args){
-    LocalTime time = LocalTime.of(0,1,2); //localtimeは不変オブジェクトのため
-    time.plusHours(12); //ここでplusHoursを使っても変更されない
-    System.out.println(time);
+    LocalDate now = LocalDate.now(); //まさに現時刻
+    LocalDate target = now.plusDays(10); //現時刻に10日plus
+    Period x = now.until(target); //untilは日付の差を計算する
+    System.out.println(x.getDays());//getDaysで取得しないと10にならない
   }
 }
-
