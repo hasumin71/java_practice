@@ -558,20 +558,59 @@
 // }
 
 //9_36
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
+// public class Main {
+//   public static void main(String[] args){
+//     ArrayList<String> list = new ArrayList<>();
+//     list.add("A");
+//     list.add("B");
+//     list.add("C");
+//     for(String str : list){ //ここに戻ってくるときにはインデックス2番目の要素はないって事、removeメソッドの時点で要素が繰り上げされているので
+//       if("B".equals(str)){
+//         list.remove(str); //removeメソッドを使用すると削除された要素の位置に次の要素が繰り上げされる、よって次に繰り返し処理する要素がないとみなされAのみ表示される
+//       }else{
+//         System.out.println(str);
+//       }
+//     }
+//   }
+// } //なぜ結果がAでCが出力されない？
+
+//9_38
+// import java.util.ArrayList;
+// import java.util.Arrays;
+// import java.util.List;
+
+// public class Main {
+//   public static void main(String[] args){
+//     List<String> list = new ArrayList<>(
+//       Arrays.asList(new String[]{"A","B","C"})
+//     );
+//     list.removeIf(
+//       (String s) -> {
+//         return s.equals("B");
+//       }
+//     );
+//     System.out.println(list);
+//   }
+// }
+
+//10_3
 public class Main {
   public static void main(String[] args){
-    ArrayList<String> list = new ArrayList<>();
-    list.add("A");
-    list.add("B");
-    list.add("C");
-    for(String str : list){ //ここに戻ってくるときにはインデックス2番目の要素はないって事、removeメソッドの時点で要素が繰り上げされているので
-      if("B".equals(str)){
-        list.remove(str); //removeメソッドを使用すると削除された要素の位置に次の要素が繰り上げされる、よって次に繰り返し処理する要素がないとみなされAのみ表示される
-      }else{
-        System.out.println(str);
+    String[] array = {"abcde", "fgh", "ijk"};
+    String[] array2 = new String[3];
+    int i = 0;
+    try{
+      for(String s : array){
+        array2[i] = s.substring(1,4); //substringは第一引数から第二引数の間にある文字列を抽出する 最初でいうとabcdeはbcdになる
+        i++;                          //ただ第二要素には4文字目を切り出す要素がありませんので例外がスローされcatchに処理が移る
       }
+    }catch (Exception e){
+      System.out.println("Error"); //Errorが出力される
+    }
+    for(String s : array2){
+      System.out.println(s);
     }
   }
-} //なぜ結果がAでCが出力されない？
+}

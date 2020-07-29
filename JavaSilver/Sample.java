@@ -130,13 +130,24 @@
 // }
 
 //9_30
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+// import java.time.LocalDateTime;
+// import java.time.format.DateTimeFormatter;
 
-public class Sample{
+// public class Sample{
+//   public static void main(String[] args){
+//     LocalDateTime time = LocalDateTime.of(2015, 8, 31, 0, 0);
+//     String str = time.format(DateTimeFormatter.ISO_DATE_TIME); //ISO_DATE_TIMEは区切り記号や時刻情報をつける.BASIC_ISO_DATEは区切りなしの年月のみ
+//     System.out.println(str);
+//   }
+// }    
+
+import java.util.function.Predicate;
+
+public class Sample {
   public static void main(String[] args){
-    LocalDateTime time = LocalDateTime.of(2015, 8, 31, 0, 0);
-    String str = time.format(DateTimeFormatter.ISO_DATE_TIME); //ISO_DATE_TIMEは区切り記号や時刻情報をつける.BASIC_ISO_DATEは区切りなしの年月のみ
-    System.out.println(str);
+    Predicate<String> p = str -> {
+      return "".equals(str);
+    };
+    System.out.println(p.test(args[0]));
   }
-}    
+}
