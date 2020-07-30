@@ -141,13 +141,38 @@
 //   }
 // }    
 
-import java.util.function.Predicate;
+// import java.util.function.Predicate;
 
+// public class Sample {
+//   public static void main(String[] args){
+//     Predicate<String> p = str -> {
+//       return "".equals(str);
+//     };
+//     System.out.println(p.test(args[0]));
+//   }
+// }
+
+//10_21
+// public class Sample {
+//   int a;
+//   static int b;
+//   public Sample(int ns) {
+//     if(b < ns){
+//       b = ns;
+//       this.a = ns;
+//     }
+//   }
+//   void doPrint(){
+//     System.out.println("a = " + a + " b = " + b);
+//   }
+// }
+
+//10_23
 public class Sample {
-  public static void main(String[] args){
-    Predicate<String> p = str -> {
-      return "".equals(str);
-    };
-    System.out.println(p.test(args[0]));
+  String name;
+  int num;
+  public Sample(String name, int num){
+    this.name = name;
+    this.num = num;
   }
 }

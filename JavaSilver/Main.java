@@ -596,21 +596,74 @@
 // }
 
 //10_3
-public class Main {
+// public class Main {
+//   public static void main(String[] args){
+//     String[] array = {"abcde", "fgh", "ijk"};
+//     String[] array2 = new String[3];
+//     int i = 0;
+//     try{
+//       for(String s : array){
+//         array2[i] = s.substring(1,4); //substringは第一引数から第二引数の間にある文字列を抽出する 最初でいうとabcdeはbcdになる
+//         i++;                          //ただ第二要素には4文字目を切り出す要素がありませんので例外がスローされcatchに処理が移る
+//       }
+//     }catch (Exception e){
+//       System.out.println("Error"); //Errorが出力される
+//     }
+//     for(String s : array2){
+//       System.out.println(s);
+//     }
+//   }
+// }
+
+//10_21
+// public class Main {
+//   public static void main(String[] args){
+//     Sample s1 = new Sample(10);
+//     Sample s2 = new Sample(30);
+//     Sample s3 = new Sample(20);
+//     s1.doPrint();
+//     s2.doPrint();
+//     s3.doPrint();
+//   }
+// }
+
+//10_23
+// public class Main {
+//   public static void main(String[] args){
+//     SubSample s1 = new SubSample(100);
+//     SubSample s2 = new SubSample("sample", 200, 100);
+//     System.out.println(s1.name + ", "+ s1.num + "," + s1.price);
+//     System.out.println(s2.name + ", "+ s2.num + "," + s2.price);
+    
+//   }
+// }
+
+//10_34
+// public class Main {
+//   String val = "7";
+//   public void doStuff(String str){
+//     int num = 0;
+//     try{
+//       String val = str; //tryブロック中のvalはブロックの外で使えない
+//       num = Integer.parseInt(val);
+//     }catch(NumberFormatException e){
+//       System.out.println("error");
+//     }
+//     System.out.println("val = " + val + ", num = " + num);
+//   }
+//   public static void main(String[] args){
+//     new Main().doStuff("9");
+//   }
+// }
+
+//10_53
+import java.time.*;
+import java.time.format.*;
+
+public class Main{
   public static void main(String[] args){
-    String[] array = {"abcde", "fgh", "ijk"};
-    String[] array2 = new String[3];
-    int i = 0;
-    try{
-      for(String s : array){
-        array2[i] = s.substring(1,4); //substringは第一引数から第二引数の間にある文字列を抽出する 最初でいうとabcdeはbcdになる
-        i++;                          //ただ第二要素には4文字目を切り出す要素がありませんので例外がスローされcatchに処理が移る
-      }
-    }catch (Exception e){
-      System.out.println("Error"); //Errorが出力される
-    }
-    for(String s : array2){
-      System.out.println(s);
-    }
+    String date = LocalDate.parse("2015-08-23").format(DateTimeFormatter.ISO_DATE_TIME);
+                            //しかしここの値には時間の情報がない//DateTimeFormatter.の定数ISO_DATE_TIMEで日付と時間を持った定数を指定している。
+    System.out.println(date);
   }
 }
