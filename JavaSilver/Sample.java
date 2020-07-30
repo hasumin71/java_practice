@@ -168,11 +168,39 @@
 // }
 
 //10_23
-public class Sample {
-  String name;
+// public class Sample {
+//   String name;
+//   int num;
+//   public Sample(String name, int num){
+//     this.name = name;
+//     this.num = num;
+//   }
+// }
+
+//10_59
+// public class Sample {
+//   public static void main(String[] args){
+//     try{
+//       test();
+//     }catch(MyException e){
+//       System.out.println("A");
+//     }
+//   }
+//   public static void test(){
+//     try{
+//       throw Math.random() > 0.5 ? new MyException() : new RuntimeException();
+//     }catch(RuntimeException e){       //MyExceptionはRuntimeExceptionクラスのサブクラスよって非検査例外
+//       System.out.println("B");        //非検査例外はコンパイラによるチェックが行われないためそのままcatchブロックが処理される
+//     }
+//   }
+// }
+
+// class MyException extends RuntimeException{}
+
+//10_64
+class Sample{
   int num;
-  public Sample(String name, int num){
-    this.name = name;
+  Sample(int num){
     this.num = num;
   }
 }

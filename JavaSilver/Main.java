@@ -657,13 +657,27 @@
 // }
 
 //10_53
-import java.time.*;
-import java.time.format.*;
+// import java.time.*;
+// import java.time.format.*;
 
-public class Main{
+// public class Main{
+//   public static void main(String[] args){
+//     String date = LocalDate.parse("2015-08-23").format(DateTimeFormatter.ISO_DATE_TIME);
+//                             //しかしここの値には時間の情報がない//DateTimeFormatter.の定数ISO_DATE_TIMEで日付と時間を持った定数を指定している。
+//     System.out.println(date);
+//   }
+// }
+
+//10_64
+public class Main {
   public static void main(String[] args){
-    String date = LocalDate.parse("2015-08-23").format(DateTimeFormatter.ISO_DATE_TIME);
-                            //しかしここの値には時間の情報がない//DateTimeFormatter.の定数ISO_DATE_TIMEで日付と時間を持った定数を指定している。
-    System.out.println(date);
+    Sample[] array={
+      new Sample(10),
+      new Sample(20)
+    };
+    Sample[] array2 = new Sample[2];
+    System.arraycopy(array, 0, array2, 0, array.length);
+    array2[1].num = 10;
+    System.out.println(array[1].num); //array[2]と同じインスタンスを持つので10になる
   }
 }
