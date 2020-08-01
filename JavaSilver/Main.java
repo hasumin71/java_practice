@@ -704,18 +704,34 @@
 // }
 
 //11_18
-import java.util.List;
+// import java.util.List;
 
-import sun.swing.UIAction;
+// import sun.swing.UIAction;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
+// public class Main {
+//   public static void main(String[] args){
+//     String[] array = {"apple","banana","orange"};
+//     List<String> list = new ArrayList<>(Arrays.asList(array));
+//     if(list.removeIf((String s) -> {return s.length() == 5;})){
+//       System.out.println(s);
+//     }
+//   }
+// }
+
+//11_20
 public class Main {
   public static void main(String[] args){
-    String[] array = {"apple","banana","orange"};
-    List<String> list = new ArrayList<>(Arrays.asList(array));
-    if(list.removeIf((String s) -> {return s.length() == 5;})){
-      System.out.println(s);
+    String[] array ={"A", "B"};
+    int i = 0;
+    while(i < array.length) {
+      int j = 0;
+      do {
+        ++j;
+      } while (j < array[i].length());
+      System.out.println(array[i] + ":" + j);
+      i++;
     }
   }
 }
