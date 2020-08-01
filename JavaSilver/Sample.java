@@ -198,9 +198,47 @@
 // class MyException extends RuntimeException{}
 
 //10_64
-class Sample{
-  int num;
-  Sample(int num){
-    this.num = num;
-  }
-}
+// class Sample{
+//   int num;
+//   Sample(int num){
+//     this.num = num;
+//   }
+// }
+
+//10_71
+// public class Sample {
+//   private char  a;
+//   private int b = 1;
+//   String test(char a, int b){
+//     return a + ", " + b;
+//   }
+//   public static void main(String[] args){
+//     Sample app = new Sample();
+//     System.out.println(app.test('A'));
+//   }
+// }
+
+//11_9
+// public class Sample {
+//   public static void main(String[] args){
+//     String a = "A"; //Stringはimmutableなクラス
+//     a = a.concat("B");
+//     // String b = "C";
+//     // a = a.concat(b);
+//     a.replace('B', 'D'); //ここで新しいABDというStringインスタンスを生成する
+//     //a = a.concat(b);
+//     System.out.println(a);
+//   }
+// }
+
+//11_10
+// public class Sample {
+//   public static void main(String[] args){
+//     int[] array = {1,2,3,4,5};
+//     for(int i = 0; i< 5; i = i + 2){
+//       System.out.print(array[i]);
+//     }
+//   }
+// }
+
+//10_

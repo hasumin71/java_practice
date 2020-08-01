@@ -683,22 +683,39 @@
 // }
 
 //10_70
+// public class Main {
+//   public static void main(String[] args){
+//     int num = 1;
+//     x:
+//     for (int i = 0; i < 3; i++) {
+//       y:
+//       for(int j = 0; j < 5; j++){
+//         if (j==1){ //変数jが０と２の時だけ変数numに加算されるがnumに加算するのはiだけなので
+//           continue;
+//         }
+//         if(j==3){
+//           break x; //breakが実行されたときには外側のループを抜ける
+//         }
+//         num += i;
+//       }
+//     }
+//     System.out.println(num);
+//   }
+// }
+
+//11_18
+import java.util.List;
+
+import sun.swing.UIAction;
+
+import java.util.ArrayList;
+
 public class Main {
   public static void main(String[] args){
-    int num = 1;
-    x:
-    for (int i = 0; i < 3; i++) {
-      y:
-      for(int j = 0; j < 5; j++){
-        if (j==1){ //変数jが０と２の時だけ変数numに加算されるがnumに加算するのはiだけなので
-          continue;
-        }
-        if(j==3){
-          break x; //breakが実行されたときには外側のループを抜ける
-        }
-        num += i;
-      }
+    String[] array = {"apple","banana","orange"};
+    List<String> list = new ArrayList<>(Arrays.asList(array));
+    if(list.removeIf((String s) -> {return s.length() == 5;})){
+      System.out.println(s);
     }
-    System.out.println(num);
   }
 }
