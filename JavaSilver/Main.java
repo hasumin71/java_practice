@@ -1008,11 +1008,26 @@
 // }
 
 //11_69
+// public class Main {
+//   public static void main(String[] args){
+//     char[] array = "HelloWorld".toCharArray();
+//     char[] array2 = new char[array.length];
+//     System.arraycopy(array,1,array2,1,array.length);
+//     System.out.println(array2);       //第五引数 第二引数の位置から幾つの要素をコピーするか
+//   }                                     //2文字目から10文字分をコピーするも存在しないため
+// }                                       //ArrayIndexOutBoundsExceptionが発生
+
+//11_70 //メソッドのオーバーロ-ドに関する問題
 public class Main {
   public static void main(String[] args){
-    char[] array = "HelloWorld".toCharArray();
-    char[] array2 = new char[array.length];
-    System.arraycopy(array,1,array2,1,array.length);
-    System.out.println(array2);       //第五引数 第二引数の位置から幾つの要素をコピーするか
-  }                                     //2文字目から10文字分をコピーするも存在しないため
-}                                       //ArrayIndexOutBoundsExceptionが発生
+    sample(2,3);
+  }
+  private static void sample(int a, int b){
+    System.out.println(a + b);
+  }
+  private static void sample(int... num){
+    for(int i : num){
+      System.out.println(i);
+    }
+  }
+}
