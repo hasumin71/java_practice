@@ -873,19 +873,46 @@
 // }
 
 //11_59
-public class Main {
-  private static int num;
-  static{
-    num = 10;
-  }
-  static{
-    num = 30;
-  }
-  static void test(int num){
-    num = num * num;
-  }
-  public static void main(String[] args) {
-    test(num);
-    System.out.println(num);
-  }
-}
+// public class Main {
+//   private static int num;
+//   static{
+//     num = 10;
+//   }
+//   static{
+//     num = 30;
+//   }
+//   static void test(int num){
+//     num = num * num;
+//   }
+//   public static void main(String[] args) {
+//     test(num);
+//     System.out.println(num);
+//   }
+// }
+
+//11_60
+// public class Main {
+//   public static void main(String[] args){
+//     String val = "1";
+//     int num = 10;
+//     if((num = num + 10) == 100) //if文の中で変数の値変更可能なんだ...
+//       val = "A";
+//     else if((num = num + 29) == 50)
+//       val = "B";
+//     else if((num = num + 200) == 10)
+//       val = "C";
+//     else
+//       val = "F";
+//     System.out.println(val + ":" + num);        
+//   }
+// }
+
+ //11_61
+ public class Main {
+   public static void main(String[] args){
+     Sample s = new Sample();
+     s.name = "test";
+     s.num = 18;
+     s.version = 2; //Sampleクラスに存在しないフィールドを使おうとするとコンパイルエラーになる
+   }
+ }
