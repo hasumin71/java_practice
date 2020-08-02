@@ -1033,20 +1033,48 @@
 // }
 
 //11_74
-public class Main { //全て同じシグニチャを持っているためコンパイルエラーになる
-  private int sample(double val){
-    System.out.println("A");
-    return 0;
-  }
-  private String sample(double val){
-    System.out.println("B");
-    return null;
-  }
-  private double sample(double val){
-    System.out.println("C");
-    return 0.0;
-  }
+// public class Main { //全て同じシグニチャを持っているためコンパイルエラーになる
+//   private int sample(double val){
+//     System.out.println("A");
+//     return 0;
+//   }
+//   private String sample(double val){
+//     System.out.println("B");
+//     return null;
+//   }
+//   private double sample(double val){
+//     System.out.println("C");
+//     return 0.0;
+//   }
+//   public static void main(String[] args){
+//     new Main().sample(1.0);
+//   }
+// }
+
+//11_76
+// public class Main {
+//   public static void main(String[] args){
+//     int[] array = {2,3,4};
+//     int[] array2 = array.clone();
+//     array2[0] = 5;
+//     for(int i : array){
+//       System.out.println(i);
+//     }
+//   }
+// }
+
+//11_77
+public class Main {
   public static void main(String[] args){
-    new Main().sample(1.0);
+    String[] array = {"A","B","C","D","E"};
+    for(String str : array){
+      if("B".equals(str)){
+        continue;
+      }
+      System.out.println(str);
+      if("C".equals(str)){
+        break;
+      }
+    }
   }
 }
