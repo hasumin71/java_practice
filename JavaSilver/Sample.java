@@ -263,15 +263,41 @@
 // }
 
 //11_31
+// public class Sample {
+//   int a, b;
+//   public Sample(int a, int b){
+//     this.a = a * a;
+//     this.b = b * b;
+//   }
+//   public static void main(String[] args) {
+//     int a = 1, b = 3;
+//     Sample s = new Sample(a,b);
+//     System.out.println(a + ", " + b);
+//   }
+// }
+
+//11_32
+// public class Sample {
+//   public static void main(String[] args){
+//     Test a = new Test();
+//     a.num2 = 20;
+//     System.out.println(a);
+//     Test b = new Test();
+//     b.num2 = 30;
+//     System.out.println(b);
+//   }
+// }
+
+//11_33
 public class Sample {
-  int a, b;
-  public Sample(int a, int b){
-    this.a = a * a;
-    this.b = b * b;
-  }
-  public static void main(String[] args) {
-    int a = 1, b = 3;
-    Sample s = new Sample(a,b);
-    System.out.println(a + ", " + b);
+  public static void main(String[] args){
+    int a = 2;
+    int b = 1;
+    if(a++ > ++b){
+      System.out.print("A ");
+    }else{
+      System.out.print("B ");
+    }
+    System.out.println(a + ":" + b);
   }
 }

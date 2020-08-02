@@ -20,13 +20,22 @@
 // }
 
 //11_24
+// class Test {
+//   static int value = 0;
+//   int count = 0;
+//   public void sample(){
+//     while(count < 5){
+//       count++;
+//       value++;
+//     }
+//   }
+// }
+
+//11_32
 class Test {
-  static int value = 0;
-  int count = 0;
-  public void sample(){
-    while(count < 5){
-      count++;
-      value++;
-    }
+  static int num = 10;
+  int num2 = 20;
+  public String toString(){
+    return num2 + ": " + num;
   }
 }
