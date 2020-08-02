@@ -6,9 +6,10 @@
 // }
 
 //11_75
-public class B extends A{
-  private String val;
-  public B(String val, int num){
-    super(num); //サブクラスにスーパークラスのコンストラクタの呼び出しが必要
-  }
-}
+// public class B extends A{
+//   private String val;
+//   public B(String val, int num){
+//     super(num); //サブクラスにスーパークラスのコンストラクタの呼び出しが必要
+//   }
+// }
+
