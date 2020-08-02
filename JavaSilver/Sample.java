@@ -304,6 +304,6 @@
 
 //11_34
 abstract class Sample {
-  public void doProcess(){}
+  protected void doProcess(){}
   abstract void doTest();
 }

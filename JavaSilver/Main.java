@@ -769,12 +769,55 @@
 // }
 
 //11_27
+// public class Main {
+//   public static void main(String[] args){
+//     int a = 0;
+//     int b = 7;
+//     for (a = 0; a < b - 1; a = a + 2){ //bの値が変わるわけではなくfor文で回すたびに6
+//       System.out.println(a);
+//     }
+//   }
+// }
+
+//11_35
+// public class Main {
+//   public static void main(String[] args){
+//     int[] arrayA = new int[3];
+//     int[] arrayB = {1,2,3,4,5};
+//     arrayA = arrayB; 
+//     for(int i : arrayA){
+//       System.out.println(i);
+//     }
+//   }
+// }
+
+//11_38
+// public class Main {
+//   public static void main(String[] args){
+//     System.out.println(new StringBuilder("Java"));
+//     //StringBuilderとは 
+//     System.out.println(new TestString("Java"));
+//   }
+// }
+
+//11_45
+// public class Main {
+//   public static void main(String[] args){
+//     String str = "a b 3 d e";
+//     String[] array = str.split("\\d"); //分割する箇所は正規表現で書く
+//     System.out.println(array.length);
+//   }
+// }
+
+//11_46
+import java.time.LocalDateTime;
+import java.time.format.*;
+
 public class Main {
   public static void main(String[] args){
-    int a = 0;
-    int b = 7;
-    for (a = 0; a < b - 1; a = a + 2){ //bの値が変わるわけではなくfor文で回すたびに6
-      System.out.println(a);
-    }
+    LocalDateTime date = LocalDateTime.of(2015, 9, 15, 1, 1);
+    date.plusDays(30);
+    date.plusMonths(1);
+    System.out.println(date.format(DateTimeFormatter.ISO_DATE));
   }
 }
