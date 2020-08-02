@@ -918,16 +918,46 @@
 //  }
 
 //11_62
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
+// public class Main {
+//   public static void main(String[] args){
+//     List<String> list = new ArrayList<>();
+//     list.add("A");
+//     list.add("B");
+//     list.add("C");
+//     list.remove(1);
+//     System.out.println(list.get(1));
+//   }
+// }
+
+//11_63
+// public class Main {
+//   public static void main(String[] args){
+//     sample();
+//     int a = b;
+//     int b = num;
+//   }
+//   private static void sample(){
+//     System.out.println(num);
+//   }
+//   static int num;
+// }
+
+//11_65 //配列の要素のデフォルト値について
 public class Main {
   public static void main(String[] args){
-    List<String> list = new ArrayList<>();
-    list.add("A");
-    list.add("B");
-    list.add("C");
-    list.remove(1);
-    System.out.println(list.get(1));
+    try{
+      String[] array = new String[5];
+      array[1] = "A";
+      array[2] = "B";
+      array[3] = "C";
+      for(String str : array){
+        System.out.println(str);
+      }
+    }catch(Exception e){
+      System.out.println("Error");
+    }
   }
 }
