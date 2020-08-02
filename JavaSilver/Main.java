@@ -863,11 +863,29 @@
 // }
 
 //11_57
+// public class Main {
+//   public static void main(String[] args){
+//     String name = "Java";
+//     int version = 7;
+//     StringBuilder sb = new StringBuilder();
+//     sb.append(name).append("SE").append(version);
+//   }
+// }
+
+//11_59
 public class Main {
-  public static void main(String[] args){
-    String name = "Java";
-    int version = 7;
-    StringBuilder sb = new StringBuilder();
-    sb.append(name).append("SE").append(version);
+  private static int num;
+  static{
+    num = 10;
+  }
+  static{
+    num = 30;
+  }
+  static void test(int num){
+    num = num * num;
+  }
+  public static void main(String[] args) {
+    test(num);
+    System.out.println(num);
   }
 }
