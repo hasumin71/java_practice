@@ -41,7 +41,18 @@
 // }
 
 //11_34
-public class Test extends Sample {
-  public void doProcess(){}
-  protected void doTest(){}
+// public class Test extends Sample {
+//   public void doProcess(){}
+//   protected void doTest(){}
+// }
+
+//11_51
+class Test{
+  int num;
+  static void test(int a){
+    a = a * a;
+  }
+  static void sample(StringBuilder a){
+    a.append(" " + a);
+  }
 }

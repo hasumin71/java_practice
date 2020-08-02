@@ -810,14 +810,55 @@
 // }
 
 //11_46
-import java.time.LocalDateTime;
-import java.time.format.*;
+// import java.time.LocalDateTime;
+// import java.time.format.*;
 
+// public class Main {
+//   public static void main(String[] args){
+//     LocalDateTime date = LocalDateTime.of(2015, 9, 15, 1, 1);
+//     date.plusDays(30);
+//     date.plusMonths(1);
+//     System.out.println(date.format(DateTimeFormatter.ISO_DATE));
+//   }
+// }
+
+//11_48
+// public class Main {
+//   public static void main(String[] args){
+//     for(int i = 0; i < 4; i++){
+//       System.out.println(i);
+//       i += 1;
+//     }
+//   }
+// }
+
+//11_49
+// public class Main {
+//   public static void main(String[] args){
+//     int[] array = {1,2,3,4,5};
+//     int x = array.length;
+//     while(0 < x){
+//       --x;
+//       System.out.println(array[x]); //インデックスの四番目を取り出さないと5は取れない
+      
+//     }  
+//   }
+// }
+
+//11_56
 public class Main {
+  private String val;
+  private int num;
+  public Main(int num){ //オーバーロードされたコンストラクタ①
+    this.num = num;
+  }
+  public Main(){ //オーバーロードされたコンストラクタ② この引数なしのコンストラクタは生成されていない
+    this.val = "test";
+    this.num = 10;
+  }
   public static void main(String[] args){
-    LocalDateTime date = LocalDateTime.of(2015, 9, 15, 1, 1);
-    date.plusDays(30);
-    date.plusMonths(1);
-    System.out.println(date.format(DateTimeFormatter.ISO_DATE));
+    Main m = new Main(20);
+    System.out.println(m.val + ", " + m.num);
   }
 }
+
