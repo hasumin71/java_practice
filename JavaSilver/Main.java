@@ -846,19 +846,28 @@
 // }
 
 //11_56
+// public class Main {
+//   private String val;
+//   private int num;
+//   public Main(int num){ //オーバーロードされたコンストラクタ①
+//     this.num = num;
+//   }
+//   public Main(){ //オーバーロードされたコンストラクタ② この引数なしのコンストラクタは生成されていない
+//     this.val = "test";
+//     this.num = 10;
+//   }
+//   public static void main(String[] args){
+//     Main m = new Main(20);
+//     System.out.println(m.val + ", " + m.num);
+//   }
+// }
+
+//11_57
 public class Main {
-  private String val;
-  private int num;
-  public Main(int num){ //オーバーロードされたコンストラクタ①
-    this.num = num;
-  }
-  public Main(){ //オーバーロードされたコンストラクタ② この引数なしのコンストラクタは生成されていない
-    this.val = "test";
-    this.num = 10;
-  }
   public static void main(String[] args){
-    Main m = new Main(20);
-    System.out.println(m.val + ", " + m.num);
+    String name = "Java";
+    int version = 7;
+    StringBuilder sb = new StringBuilder();
+    sb.append(name).append("SE").append(version);
   }
 }
-
