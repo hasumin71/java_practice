@@ -1018,16 +1018,35 @@
 // }                                       //ArrayIndexOutBoundsExceptionが発生
 
 //11_70 //メソッドのオーバーロ-ドに関する問題
-public class Main {
+// public class Main {
+//   public static void main(String[] args){
+//     sample(2,3);
+//   }
+//   private static void sample(int a, int b){
+//     System.out.println(a + b);
+//   }
+//   private static void sample(int... num){
+//     for(int i : num){
+//       System.out.println(i);
+//     }
+//   }
+// }
+
+//11_74
+public class Main { //全て同じシグニチャを持っているためコンパイルエラーになる
+  private int sample(double val){
+    System.out.println("A");
+    return 0;
+  }
+  private String sample(double val){
+    System.out.println("B");
+    return null;
+  }
+  private double sample(double val){
+    System.out.println("C");
+    return 0.0;
+  }
   public static void main(String[] args){
-    sample(2,3);
-  }
-  private static void sample(int a, int b){
-    System.out.println(a + b);
-  }
-  private static void sample(int... num){
-    for(int i : num){
-      System.out.println(i);
-    }
+    new Main().sample(1.0);
   }
 }
