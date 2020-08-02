@@ -251,3 +251,27 @@
 //   }
 // }
 
+//11_24
+// public class Sample {
+//   public static void main(String[] args){
+//     Test a = new Test();
+//     Test b = new Test();
+//     a.sample();
+//     b.sample();
+//     System.out.println(a.count +", "+ b.count);
+//   }
+// }
+
+//11_31
+public class Sample {
+  int a, b;
+  public Sample(int a, int b){
+    this.a = a * a;
+    this.b = b * b;
+  }
+  public static void main(String[] args) {
+    int a = 1, b = 3;
+    Sample s = new Sample(a,b);
+    System.out.println(a + ", " + b);
+  }
+}

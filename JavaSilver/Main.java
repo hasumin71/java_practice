@@ -721,17 +721,60 @@
 // }
 
 //11_20
+// public class Main {
+//   public static void main(String[] args){
+//     String[] array ={"A", "B"};
+//     int i = 0;
+//     while(i < array.length) {
+//       int j = 0;
+//       do {
+//         ++j;
+//       } while (j < array[i].length());
+//       System.out.println(array[i] + ":" + j);
+//       i++;
+//     }
+//   }
+// }
+
+//11_23
+// public class Main {
+//   public static void main(String[] args){
+//     int num = 0;
+//     String[] array ={"A","B","C","D"};
+//     for(String s : array){
+//       switch(s){
+//         case "D":
+//         case "A":
+//           num -= 1;
+//           break;
+//         case "B":
+//           num++;
+//         case "C":
+//           num += 2;    
+//       }
+//     }
+//     System.out.println(num);
+//   }
+// }
+
+
+//11_26
+// public class Main {
+//   public static void main(String[] args){
+//     int a= 10;
+//     int b= 20; //22
+//     int c = b += a/5;
+//     System.out.println(a + b + c); //10,22,22
+//   }
+// }
+
+//11_27
 public class Main {
   public static void main(String[] args){
-    String[] array ={"A", "B"};
-    int i = 0;
-    while(i < array.length) {
-      int j = 0;
-      do {
-        ++j;
-      } while (j < array[i].length());
-      System.out.println(array[i] + ":" + j);
-      i++;
+    int a = 0;
+    int b = 7;
+    for (a = 0; a < b - 1; a = a + 2){ //bの値が変わるわけではなくfor文で回すたびに6
+      System.out.println(a);
     }
   }
 }
