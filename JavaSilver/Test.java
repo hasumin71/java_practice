@@ -32,10 +32,16 @@
 // }
 
 //11_32
-class Test {
-  static int num = 10;
-  int num2 = 20;
-  public String toString(){
-    return num2 + ": " + num;
-  }
+// class Test {
+//   static int num = 10;
+//   int num2 = 20;
+//   public String toString(){
+//     return num2 + ": " + num;
+//   }
+// }
+
+//11_34
+public class Test extends Sample {
+  public void doProcess(){}
+  protected void doTest(){}
 }

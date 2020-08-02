@@ -289,15 +289,21 @@
 // }
 
 //11_33
-public class Sample {
-  public static void main(String[] args){
-    int a = 2;
-    int b = 1;
-    if(a++ > ++b){
-      System.out.print("A ");
-    }else{
-      System.out.print("B ");
-    }
-    System.out.println(a + ":" + b);
-  }
+// public class Sample {
+//   public static void main(String[] args){
+//     int a = 2;
+//     int b = 1;
+//     if(a++ > ++b){
+//       System.out.print("A ");
+//     }else{
+//       System.out.print("B ");
+//     }
+//     System.out.println(a + ":" + b);
+//   }
+// }
+
+//11_34
+abstract class Sample {
+  public void doProcess(){}
+  abstract void doTest();
 }
