@@ -1000,9 +1000,19 @@
 // }
 
 //11_68
+// public class Main {
+//   public static void main(String[] args){
+//     System.out.println("result=" + 2 + 3 + 4);
+//     System.out.println("result=" + 2 + 3 * 4);
+//   }
+// }
+
+//11_69
 public class Main {
   public static void main(String[] args){
-    System.out.println("result=" + 2 + 3 + 4);
-    System.out.println("result=" + 2 + 3 * 4);
-  }
-}
+    char[] array = "HelloWorld".toCharArray();
+    char[] array2 = new char[array.length];
+    System.arraycopy(array,1,array2,1,array.length);
+    System.out.println(array2);       //第五引数 第二引数の位置から幾つの要素をコピーするか
+  }                                     //2文字目から10文字分をコピーするも存在しないため
+}                                       //ArrayIndexOutBoundsExceptionが発生
