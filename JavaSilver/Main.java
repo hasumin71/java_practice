@@ -908,11 +908,26 @@
 // }
 
  //11_61
- public class Main {
-   public static void main(String[] args){
-     Sample s = new Sample();
-     s.name = "test";
-     s.num = 18;
-     s.version = 2; //Sampleクラスに存在しないフィールドを使おうとするとコンパイルエラーになる
-   }
- }
+//  public class Main {
+//    public static void main(String[] args){
+//      Sample s = new Sample();
+//      s.name = "test";
+//      s.num = 18;
+//      s.version = 2; //Sampleクラスに存在しないフィールドを使おうとするとコンパイルエラーになる
+//    }
+//  }
+
+//11_62
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+  public static void main(String[] args){
+    List<String> list = new ArrayList<>();
+    list.add("A");
+    list.add("B");
+    list.add("C");
+    list.remove(1);
+    System.out.println(list.get(1));
+  }
+}
