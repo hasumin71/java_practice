@@ -981,20 +981,28 @@
 //   }
 // }
 //11_66 ②
+// public class Main {
+//   public static void main(String[] args){ //sampleメソッドを呼び出しているmainメソッドでも宣言が必要
+//     try{
+//       if(args.length == 0){
+//         sample(null); 
+//       }else{
+//         sample(args[0]);
+//       }
+//     }catch(Exception e){ //RuntimeExceptionは非検査例外
+//       System.out.println("error");
+//     }
+//   }
+//   private static void sample(String str)throws Exception{ //メソッドでの検査例外の可能性の宣言をしなくてはいけない
+//     if(str == null) throw new Exception();
+//     throw new RuntimeException();
+//   }
+// }
+
+//11_68
 public class Main {
-  public static void main(String[] args){ //sampleメソッドを呼び出しているmainメソッドでも宣言が必要
-    try{
-      if(args.length == 0){
-        sample(null); 
-      }else{
-        sample(args[0]);
-      }
-    }catch(Exception e){ //RuntimeExceptionは非検査例外
-      System.out.println("error");
-    }
-  }
-  private static void sample(String str)throws Exception{ //メソッドでの検査例外の可能性の宣言をしなくてはいけない
-    if(str == null) throw new Exception();
-    throw new RuntimeException();
+  public static void main(String[] args){
+    System.out.println("result=" + 2 + 3 + 4);
+    System.out.println("result=" + 2 + 3 * 4);
   }
 }
