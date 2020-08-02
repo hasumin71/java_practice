@@ -946,18 +946,55 @@
 // }
 
 //11_65 //配列の要素のデフォルト値について
+// public class Main {
+//   public static void main(String[] args){
+//     try{
+//       String[] array = new String[5];
+//       array[1] = "A";
+//       array[2] = "B";
+//       array[3] = "C";
+//       for(String str : array){
+//         System.out.println(str);
+//       }
+//     }catch(Exception e){
+//       System.out.println("Error");
+//     }
+//   }
+// }
+
+//11_66 ①
+// public class Main {
+//   public static void main(String[] args)throws Exception{
+//     try{
+//       if(args.length == 0){
+//         sample(null);
+//       }else{
+//         sample(args[0]);
+//       }
+//     }catch(RuntimeException e){
+//       System.out.println("error");
+//     }
+//   }
+//   private static void sample(String str)throws Exception{
+//     if(str == null) throw new Exception();
+//     throw new RuntimeException();
+//   }
+// }
+//11_66 ②
 public class Main {
-  public static void main(String[] args){
+  public static void main(String[] args){ //sampleメソッドを呼び出しているmainメソッドでも宣言が必要
     try{
-      String[] array = new String[5];
-      array[1] = "A";
-      array[2] = "B";
-      array[3] = "C";
-      for(String str : array){
-        System.out.println(str);
+      if(args.length == 0){
+        sample(null); 
+      }else{
+        sample(args[0]);
       }
-    }catch(Exception e){
-      System.out.println("Error");
+    }catch(Exception e){ //RuntimeExceptionは非検査例外
+      System.out.println("error");
     }
+  }
+  private static void sample(String str)throws Exception{ //メソッドでの検査例外の可能性の宣言をしなくてはいけない
+    if(str == null) throw new Exception();
+    throw new RuntimeException();
   }
 }
