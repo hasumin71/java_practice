@@ -219,17 +219,17 @@
 // }
 
 //11_9
-// public class Sample {
-//   public static void main(String[] args){
-//     String a = "A"; //Stringはimmutableなクラス
-//     a = a.concat("B");
-//     // String b = "C";
-//     // a = a.concat(b);
-//     a.replace('B', 'D'); //ここで新しいABDというStringインスタンスを生成する
-//     //a = a.concat(b);
-//     System.out.println(a);
-//   }
-// }
+public class Sample {
+  public static void main(String[] args){
+    String a = "A"; //Stringはimmutableなクラス
+    a = a.concat("B");
+    String b = "C";
+    a = a.concat(b);
+    a = a.replace('C', 'D'); //ここで新しいABDというStringインスタンスを生成する
+    a = a.concat(b);
+    System.out.println(a);
+  }
+}
 
 //11_10
 // public class Sample {
@@ -237,6 +237,18 @@
 //     int[] array = {1,2,3,4,5};
 //     for(int i = 0; i< 5; i = i + 2){
 //       System.out.print(array[i]);
+//     }
+//   }
+// }
+
+//11_14
+// public class Sample {
+//   public static void main(String[] args){
+//     Item[] items = new Item[2];
+//     items[0] = new Item("A");
+//     items[1] = new Item("B");
+//     for(Item item : items){
+//       System.out.println(item.name);
 //     }
 //   }
 // }
@@ -270,7 +282,7 @@
 //     this.b = b * b;
 //   }
 //   public static void main(String[] args) {
-//     int a = 1, b = 3;
+//     int a = 2, b = 3;
 //     Sample s = new Sample(a,b);
 //     System.out.println(a + ", " + b);
 //   }
@@ -280,11 +292,14 @@
 // public class Sample {
 //   public static void main(String[] args){
 //     Test a = new Test();
-//     a.num2 = 20;
+//     a.num2 = 30;
 //     System.out.println(a);
 //     Test b = new Test();
-//     b.num2 = 30;
+//     b.num = 30;
 //     System.out.println(b);
+//     Test c = new Test();
+//     c.num += 30;
+//     System.out.println(c);
 //   }
 // }
 
@@ -323,9 +338,9 @@
 // }
 
 //11_61
-public class Sample {
-  public String name = "";
-  public int num = 0;
-  public String val = "sample";
-  public boolean flg = true;
-}
+// public class Sample {
+//   public String name = "";
+//   public int num = 0;
+//   public String val = "sample";
+//   public boolean flg = true;
+// }

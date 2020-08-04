@@ -32,13 +32,13 @@
 // }
 
 //11_32
-// class Test {
-//   static int num = 10;
-//   int num2 = 20;
-//   public String toString(){
-//     return num2 + ": " + num;
-//   }
-// }
+class Test {
+  static int num = 10;
+  int num2 = 20;
+  public String toString(){
+    return num2 + ": " + num;
+  }
+}
 
 //11_34
 // public class Test extends Sample {
@@ -47,12 +47,12 @@
 // }
 
 //11_51
-class Test{
-  int num;
-  static void test(int a){
-    a = a * a;
-  }
-  static void sample(StringBuilder a){
-    a.append(" " + a);
-  }
-}
+// class Test{
+//   int num;
+//   static void test(int a){
+//     a = a * a;
+//   }
+//   static void sample(StringBuilder a){
+//     a.append(" " + a);
+//   }
+// }

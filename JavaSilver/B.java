@@ -5,6 +5,13 @@
 //   }
 // }
 
+//10_74
+public class B extends A {
+  public void bye(){
+    System.out.println("bye");
+  }
+}
+
 //11_75
 // public class B extends A{
 //   private String val;

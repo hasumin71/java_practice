@@ -703,6 +703,14 @@
 //   }
 // }
 
+//10_74
+public class Main {
+  public static void main(String[] args){
+    B a = new B();
+    a.hello();
+  }
+}
+
 //11_18
 // import java.util.List;
 
@@ -1064,17 +1072,17 @@
 // }
 
 //11_77
-public class Main {
-  public static void main(String[] args){
-    String[] array = {"A","B","C","D","E"};
-    for(String str : array){
-      if("B".equals(str)){
-        continue;
-      }
-      System.out.println(str);
-      if("C".equals(str)){
-        break;
-      }
-    }
-  }
-}
+// public class Main {
+//   public static void main(String[] args){
+//     String[] array = {"A","B","C","D","E"};
+//     for(String str : array){
+//       if("B".equals(str)){
+//         continue;
+//       }
+//       System.out.println(str);
+//       if("C".equals(str)){
+//         break;
+//       }
+//     }
+//   }
+// }
