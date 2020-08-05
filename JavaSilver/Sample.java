@@ -177,19 +177,21 @@
 //   }
 // }
 
+
+
 //10_59
 // public class Sample {
 //   public static void main(String[] args){
 //     try{
 //       test();
-//     }catch(MyException e){
+//     }catch(RuntimeException e){
 //       System.out.println("A");
 //     }
 //   }
 //   public static void test(){
 //     try{
 //       throw Math.random() > 0.5 ? new MyException() : new RuntimeException();
-//     }catch(RuntimeException e){       //MyExceptionはRuntimeExceptionクラスのサブクラスよって非検査例外
+//     }catch(MyException  e){       //MyExceptionはRuntimeExceptionクラスのサブクラスよって非検査例外
 //       System.out.println("B");        //非検査例外はコンパイラによるチェックが行われないためそのままcatchブロックが処理される
 //     }
 //   }
@@ -219,17 +221,17 @@
 // }
 
 //11_9
-public class Sample {
-  public static void main(String[] args){
-    String a = "A"; //Stringはimmutableなクラス
-    a = a.concat("B");
-    String b = "C";
-    a = a.concat(b);
-    a = a.replace('C', 'D'); //ここで新しいABDというStringインスタンスを生成する
-    a = a.concat(b);
-    System.out.println(a);
-  }
-}
+// public class Sample {
+//   public static void main(String[] args){
+//     String a = "A"; //Stringはimmutableなクラス
+//     a = a.concat("B");
+//     String b = "C";
+//     a = a.concat(b);
+//     a = a.replace('C', 'D'); //ここで新しいABDというStringインスタンスを生成する
+//     a = a.concat(b);
+//     System.out.println(a);
+//   }
+// }
 
 //11_10
 // public class Sample {

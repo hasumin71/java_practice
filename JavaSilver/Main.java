@@ -656,6 +656,22 @@
 //   }
 // }
 
+//10_38
+public class Main {
+  static double total;
+  int a = 2, b = 3; //一応初期化しているが、デフォルト値で初期化もできる
+  public static void main(String[] args){
+    double x = 0, a= 0, b= 0; //しかしローカル変数は初期化できていないので、プログラマが明示的に初期化する
+    if (total == 0){
+      a = 3;
+      b = 4;
+      x = 0.5;
+    }
+    total = x * a * b;
+    System.out.println(total);
+  }
+}
+
 //10_53
 // import java.time.*;
 // import java.time.format.*;
@@ -665,6 +681,14 @@
 //     String date = LocalDate.parse("2015-08-23").format(DateTimeFormatter.ISO_DATE_TIME);
 //                             //しかしここの値には時間の情報がない//DateTimeFormatter.の定数ISO_DATE_TIMEで日付と時間を持った定数を指定している。
 //     System.out.println(date);
+//   }
+// }
+
+//10_58
+// public class Main {
+//   public static void main(String[] args){
+//     int result = 30 - 12 / (2*5) + 1;
+//     System.out.println(result);
 //   }
 // }
 
@@ -704,12 +728,12 @@
 // }
 
 //10_74
-public class Main {
-  public static void main(String[] args){
-    B a = new B();
-    a.hello();
-  }
-}
+// public class Main {
+//   public static void main(String[] args){
+//     A a = new B();
+//     a.hello();
+//   }
+// }
 
 //11_18
 // import java.util.List;
