@@ -644,7 +644,7 @@
 //   public void doStuff(String str){
 //     int num = 0;
 //     try{
-//       String val = str; //tryブロック中のvalはブロックの外で使えない
+//       String val = str; //tryブロックの中でvalが宣言されているので外で使えない
 //       num = Integer.parseInt(val);
 //     }catch(NumberFormatException e){
 //       System.out.println("error");
@@ -657,20 +657,20 @@
 // }
 
 //10_38
-public class Main {
-  static double total;
-  int a = 2, b = 3; //一応初期化しているが、デフォルト値で初期化もできる
-  public static void main(String[] args){
-    double x = 0, a= 0, b= 0; //しかしローカル変数は初期化できていないので、プログラマが明示的に初期化する
-    if (total == 0){
-      a = 3;
-      b = 4;
-      x = 0.5;
-    }
-    total = x * a * b;
-    System.out.println(total);
-  }
-}
+// public class Main {
+//   static double total = 0;
+//   int a = 2, b = 3; //一応初期化しているが、デフォルト値で初期化もできる
+//   public static void main(String[] args){
+//     double x = 0, a = 0, b = 0; //しかしローカル変数は初期化できていないので、プログラマが明示的に初期化する
+//     if (total == 0){
+//       a = 3;
+//       b = 4;
+//       x = 0.5;
+//     }
+//     total = x * a * b;
+//     System.out.println(total);
+//   }
+// }
 
 //10_53
 // import java.time.*;
