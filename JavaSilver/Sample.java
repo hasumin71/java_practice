@@ -152,15 +152,30 @@
 //   }
 // }
 
+//10_18
+// import java.io.IOException;
+
+// class X {
+//   public void print() throws IOException{
+//     throw new IOException();
+//   }
+// }
+// public class Sample {
+//   public static void main(String[] args) throws Exception{
+//     X obj = new X();
+//     obj.print();
+//   }
+// }
+
 //10_19
-public class Sample {
-  public static void main(String[] args){
-    double a = 0;
-    int b = 90;
-    a = (b >= 90) ? 0.5 : (b > 80) ? 0.2 : 0;
-    System.out.println(100 * a);
-  }
-}
+// public class Sample {
+//   public static void main(String[] args){
+//     double a = 0;
+//     int b = 90;
+//     a = (b >= 90) ? 0.5 : (b > 80) ? 0.2 : 0;
+//     System.out.println(100 * a);
+//   }
+// }
 
 //10_21
 // public class Sample {
@@ -356,3 +371,16 @@ public class Sample {
 //   public String val = "sample";
 //   public boolean flg = true;
 // }
+
+//9_28
+import java.time.Duration;
+import java.time.LocalDateTime;
+
+public class Sample {
+  public static void main(String[] args){
+    LocalDateTime start = LocalDateTime.of(2015,1,1,0,0);
+    LocalDateTime end = LocalDateTime.of(2015,1,2,1,0);
+    Duration d = Duration.between(start, end);
+    System.out.println(d.toHours());
+  }
+}
