@@ -1112,9 +1112,25 @@
 // }
 
 //10_67
+// public class Main {
+//   public static void main(String[] args){
+//     String str = "Hello  World";
+//     System.out.println(str.charAt(11));
+//   }
+// }
+
+//9_34
+import java.util.ArrayList;
+
 public class Main {
   public static void main(String[] args){
-    String str = "Hello  World";
-    System.out.println(str.charAt(11));
+    ArrayList<String> list = new ArrayList<>();
+    list.add("A");
+    list.set(0,"B"); //setメソッドは元の値を上書きする //B
+    list.add("C"); //BC
+    list.set(1,"D"); //BD
+    for(String str : list){
+      System.out.print(str);
+    }
   }
 }
